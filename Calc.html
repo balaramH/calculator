@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Calculator</title>
+    <style>
+        .calc {
+            height: 69vh;
+            width: 53vh;
+            border: 2px solid rgb(20, 12, 12);
+            background-color: rgb(167, 234, 236);
+            margin: auto;
+            padding: 15px;;
+        }
+
+        .out {
+            height: 11vh;
+            width: 52vh;
+            border: 3px solid rgb(223, 70, 70);
+            background-color: rgb(137, 151, 147);
+            margin: auto;
+            padding: 10;
+
+        }
+
+        .i1, .ia, .is, .im, .id, .idot, .i2, .i3,.i4, .i5,.i6,  .i7,.i8,.i9,
+        .i0 {
+            display: inline-block;
+            height: 10vh;
+            padding: 1px;
+            width: 12vh;
+            position:relative;
+            border: 1px solid rgb(0, 0, 0);
+            background-color: rgb(237, 245, 243);
+        }
+
+        .iac {
+            display: inline-block;
+            height: 10vh;
+            width: 12vh;
+            padding: 2px;
+            position: right;
+            border: 1px solid rgb(0, 0, 0);
+            background-color: rgb(233, 17, 64);
+        }
+
+        .ieq {            
+            height: 42vh;
+            width: 12vh;
+            padding: 2px;
+            float: right;
+            border: 1px solid rgb(0, 0, 0);
+            background-color: rgb(221, 214, 216);
+        }
+
+        id {
+            text-align: center;
+            font-size: 30px;
+            width: 12vh;
+            height: 10vh;
+        }
+    </style>
+</head>
+<body>
+    <div class="calc">
+        <div class="out">
+            <form name="out">
+                <input type="text" id="calc" name="total" value="" style="height: 10vh; width: 50.8vh; background-color: rgb(0, 0, 0);
+                color: white; text-align: right;font-size: 30px;">
+            </form>
+        </div>
+        <br>
+        <samp class="ia"> <button id="add" value="+"
+                style="text-align: center;font-size: 30px;width:12vh; height: 10vh;"
+                onclick="out.total.value += '+'">+</button></samp>
+        <samp class="im"> <button id="mul" value="*"
+                style="text-align: center;font-size: 30px;width:12vh; height: 10vh;"
+                onclick="out.total.value += '*'">*</button></samp>
+        <samp class="is"> <button id="sub" value="-"
+                style="text-align: center;font-size: 30px;width:12vh; height: 10vh;"
+                onclick="out.total.value += '-'">-</button></samp>
+        <samp class="id"> <button id="div" value="/"
+                style="text-align: center;font-size: 30px;width:12vh; height: 10vh;"
+                onclick="out.total.value += '/'">/</button></samp>
+                                                                                   <!-- eval()= show the out put of the calculato -->
+        <samp class="ieq"> <button id="total" value="=" type="number" onclick="out.total.value=eval(out.total.value)"  
+                style="text-align: center;font-size: 30px;width:12vh; height: 42vh;">=</button></samp>
+        <samp class="i7"> <button id="i7" value="7" style="text-align: center;font-size: 30px;width:12vh; height: 10vh;"
+                onclick="out.total.value += '7'">7</button></samp>
+        <samp class="i8"> <button id="i8" value="8" style="text-align: center;font-size: 30px;width:12vh; height: 10vh;"
+                onclick="out.total.value += '8'">8</button></samp>
+        <samp class="i9"><button id="i9" value="9" style="text-align: center;font-size: 30px;width:12vh; height: 10vh;"
+                onclick="out.total.value += '9'">9</button></samp>
+        <samp class="i4"> <button id="i4" value="4" style="text-align: center;font-size: 30px;width:12vh; height: 10vh;"
+                onclick="out.total.value += '4'">4</button></samp>
+        <samp class="i5"> <button id="i5" value="5" style="text-align: center;font-size: 30px;width:12vh; height: 10vh;"
+                onclick="out.total.value += '5'">5</button></samp>
+        <samp class="i6"> <button id="i6" value="6" style="text-align: center;font-size: 30px;width:12vh; height: 10vh;"
+                onclick="out.total.value += '6'">6</button></samp>
+        <samp class="i1"> <button id="i1" value="1" style="text-align: center;font-size: 30px;width:12vh; height: 10vh;"
+                onclick="out.total.value += '1'">1</button></samp>
+        <samp class="i2"> <button id="i2" value="2" style="text-align: center;font-size: 30px;width:12vh; height: 10vh;"
+                onclick="out.total.value += '2'">2</button></samp>
+        <samp class="i3"> <button id="i3" value="3" style="text-align: center;font-size: 30px;width:12vh; height: 10vh;"
+                onclick="out.total.value += '3'">3</button></samp>
+        <samp class="i0"> <button id="i0" value="0" style="text-align: center;font-size: 30px;width:12vh; height: 10vh;"
+                onclick="out.total.value += '0'">0</button></samp>
+        <samp class="idot"> <button id="idot" value="."
+                style="text-align: center;font-size: 30px;width:12vh; height: 10vh;"
+                onclick="out.total.value += '.'">.</button></samp>
+        <samp class="iac"><button id="iac" value="clear" onclick="out.total.value=''"
+                style="text-align: center;background-color: red; font-size: 30px;width:12vh; height: 10vh;"> AC
+            </button> </samp>
+            <!-- <samp class="iac"><button id="iac" value="clear" onclick="ac()"
+                style="text-align: center;background-color: red; font-size: 30px;width:12vh; height: 10vh;"> AC
+            </button> </samp> -->
+    </div>
+    <script>
+        {
+        function eval(out,total,value);
+        }
+
+    </script>
+    <script>
+        function ac() {
+            window.location.reload();
+        }
+    </script>
+</body>
+
+</html>
